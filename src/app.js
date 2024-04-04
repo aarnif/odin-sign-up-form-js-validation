@@ -1,9 +1,7 @@
-import sumOfTwoNumbers from "./modules/example.js";
+import emailValidation from "./modules/emailValidation.js";
 
 const app = () => {
-  const a = 1;
-  const b = 2;
-  console.log(`The sum of integers ${a} and ${b} is ${sumOfTwoNumbers(a, b)}`);
+  emailValidation();
 };
 
 export default app;
