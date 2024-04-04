@@ -337,10 +337,11 @@
             id="password"
             name="password"
             required
-            minlength="6"
+            minlength="8"
             maxlength="18"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
           />
-          <span id="password-error">Password is required</span>
+          <span id="password-error">You need to enter an password.</span>
         </li>
         <li class="form-item">
           <label for="confirm-password">Confirm Password</label>
