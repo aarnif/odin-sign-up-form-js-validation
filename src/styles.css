@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 box-border;
+  }
+  .form-item {
+    @apply flex flex-col max-w-[300px];
+  }
+  .form-item label {
+    @apply text-sm font-semibold text-gray-600;
+  }
+  .form-item input {
+    @apply pe-1 border border-gray-300 rounded-md;
+  }
+  .form-item input:focus {
+    @apply outline-none ring-1 ring-blue-500 invalid:ring-red-500;
+  }
+  .form-item span {
+    @apply hidden text-sm invalid:text-red-500 valid:text-green-500;
+  }
+  .form-item button {
+    @apply mt-2 px-4 py-2 border border-gray-300  rounded-md;
+  }
+}
