@@ -4,7 +4,7 @@ const countryError = document.getElementById("country-error");
 
 const coutryValidation = () => {
   countryInput.addEventListener("input", (event) => {
-    console.log("input-value:", event.target.value);
+    console.log("country-value:", event.target.value);
     if (countryInput.validity.valid) {
       countryError.textContent = "";
       countryError.classList.remove("active");
@@ -21,7 +21,7 @@ const coutryValidation = () => {
   });
 
   const showError = () => {
-    if (country.validity.valueMissing) {
+    if (countryInput.validity.valueMissing) {
       countryError.textContent = "You need select a country.";
     }
     countryError.classList.add("active");

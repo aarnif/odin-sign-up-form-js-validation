@@ -319,8 +319,16 @@
         </li>
         <li class="form-item">
           <label for="zip-code">Zip Code</label>
-          <input type="text" id="zip-code" name="zip-code" required />
-          <span id="zip-code-error">Zip Code is required</span>
+          <input
+            type="text"
+            id="zip-code"
+            name="zip-code"
+            required
+            minlength="5"
+            maxlength="5"
+            pattern="^\d{5}$"
+          />
+          <span id="zip-code-error">You need to enter an ZIP-code.</span>
         </li>
         <li class="form-item">
           <label for="password">Password</label>
