@@ -4,25 +4,80 @@
 
 @layer base {
   body {
-    @apply m-0 box-border;
+    @apply m-0 box-border bg-hero bg-cover bg-center bg-no-repeat text-slate-50 text-lg;
+  }
+  .transition-effect {
+    @apply transition duration-200 ease-in-out;
+  }
+  #wrapper {
+    @apply w-full h-screen flex justify-center items-center;
+  }
+  #content {
+    @apply flex-grow max-w-[2000px] flex flex-col justify-between h-screen xl:flex-row;
+  }
+  .h2 {
+    @apply text-3xl font-bold;
+  }
+  #hero-section {
+    @apply basis-1/2 flex justify-center items-center;
+  }
+  .hero-section-content {
+    @apply mx-8 h-full max-h-[400px] flex flex-col justify-between text-shadow;
+  }
+  .hero-header {
+    @apply text-8xl font-extrabold;
+  }
+  .hero-text-content {
+    @apply flex flex-col justify-around;
+  }
+  .hero-text {
+    @apply my-4 text-3xl font-bold;
+  }
+  #sign-up-section {
+    @apply basis-1/2 flex flex-col items-center;
+  }
+  #sign-up-form-container {
+    @apply w-full flex-grow flex flex-col justify-center items-center;
+  }
+  #sign-up-form {
+    @apply w-full min-w-[300px] max-w-[600px] p-6 flex flex-col justify-center items-center
+    bg-slate-900 bg-opacity-50 rounded-md shadow-md;
+  }
+  #sign-up-form-items {
+    @apply w-full flex flex-col  p-8;
   }
   .form-item {
-    @apply flex flex-col max-w-[300px];
+    @apply flex flex-col mb-3;
   }
   .form-item label {
-    @apply text-sm font-semibold text-gray-600;
+    @apply font-semibold text-slate-300;
   }
   .form-item input {
-    @apply pe-1 border border-gray-300 rounded-md;
-  }
-  .form-item input:focus {
-    @apply outline-none ring-1 ring-blue-500 invalid:ring-red-500;
+    @apply p-2 border-2 border-slate-300 rounded-md bg-slate-800 bg-opacity-50 
+    hover:bg-slate-900 active:bg-slate-900 focus:bg-slate-900 transition-effect;
   }
   .form-item span {
-    @apply text-sm invalid:text-red-500 valid:text-green-500;
+    @apply px-2 bg-slate-900 rounded-md text-slate-300;
   }
-  .form-item button {
-    @apply mt-2 px-4 py-2 border border-gray-300  rounded-md;
+  .form-item span.active {
+    @apply bg-red-400 text-red-700 border-2 border-red-700;
+  }
+  .form-item .country-select {
+    @apply p-2 border-2 border-slate-300 rounded-md bg-slate-800 bg-opacity-50 hover:bg-slate-900 active:bg-slate-900 focus:bg-slate-900 transition-effect;
+  }
+  .form-item input:focus {
+    @apply outline-none ring-1 valid:ring-sky-600 valid:border-sky-600 invalid:ring-red-600 invalid:border-red-600 transition-effect;
+  }
+  .form-item .country-select:focus {
+    @apply outline-none ring-1 valid:ring-sky-600 valid:border-sky-600 invalid:ring-red-600 invalid:border-red-600 transition-effect;
+  }
+  .sign-up-button-item {
+    @apply flex justify-center;
+  }
+  .sign-up-button {
+    @apply min-w-[200px] mt-2 px-4 py-2 bg-slate-800 border-2 border-slate-300 rounded-md text-xl
+    text-slate-300 hover:bg-slate-900 hover:text-sky-600 hover:border-sky-600 active:scale-95 
+    transition-effect;
   }
   .form-item span .active {
     @apply py-2;

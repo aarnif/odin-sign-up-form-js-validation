@@ -4,7 +4,7 @@ import zipCodeValidation from "./modules/zipCodeValidation.js";
 import passwordValidation from "./modules/passwordValidation.js";
 import confirmPasswordValidation from "./modules/confirmPasswordValidation.js";
 
-const form = document.getElementById("form");
+const form = document.getElementById("sign-up-form");
 const dialog = document.getElementById("dialog");
 const closeDialogButton = document.getElementById("close-dialog");
 

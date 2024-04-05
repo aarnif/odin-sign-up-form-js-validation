@@ -1,4 +1,4 @@
-const form = document.getElementById("form");
+const form = document.getElementById("sign-up-form");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 const confirmPasswordError = document.getElementById("confirm-password-error");

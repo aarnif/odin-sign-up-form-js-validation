@@ -1,4 +1,4 @@
-const form = document.getElementById("form");
+const form = document.getElementById("sign-up-form");
 const emailInput = document.getElementById("email");
 const emailError = document.getElementById("email-error");
 

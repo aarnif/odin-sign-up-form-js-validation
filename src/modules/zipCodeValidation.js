@@ -1,4 +1,4 @@
-const form = document.getElementById("form");
+const form = document.getElementById("sign-up-form");
 const zipCodeInput = document.getElementById("zip-code");
 const zipCodeError = document.getElementById("zip-code-error");
 

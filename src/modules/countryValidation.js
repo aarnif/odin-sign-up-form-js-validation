@@ -1,4 +1,4 @@
-const form = document.getElementById("form");
+const form = document.getElementById("sign-up-form");
 const countryInput = document.getElementById("country");
 const countryError = document.getElementById("country-error");
 
