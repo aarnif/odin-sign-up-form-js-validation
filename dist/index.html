@@ -30,7 +30,7 @@
         <div id="sign-up-section">
           <div id="sign-up-form-container">
             <form id="sign-up-form" novalidate>
-              <h2 class="h2">Sign-up</h2>
+              <h2 class="sign-up-header">Sign Up</h2>
               <ul id="sign-up-form-items">
                 <li class="form-item">
                   <label for="email">Email</label>
@@ -40,10 +40,9 @@
                     name="email"
                     required
                     minlength="6"
+                    placeholder="You need to enter an email address."
                   />
-                  <span id="email-error"
-                    >You need to enter an email address.</span
-                  >
+                  <span id="email-error"></span>
                 </li>
                 <li class="form-item">
                   <label for="country">Country</label>
@@ -372,7 +371,7 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                   </select>
-                  <span id="country-error">You need to select a country.</span>
+                  <span id="country-error"></span>
                 </li>
                 <li class="form-item">
                   <label for="zip-code">Zip Code</label>
@@ -384,10 +383,9 @@
                     minlength="5"
                     maxlength="5"
                     pattern="^\d{5}$"
+                    placeholder="You need to enter an ZIP-code."
                   />
-                  <span id="zip-code-error"
-                    >You need to enter an ZIP-code.</span
-                  >
+                  <span id="zip-code-error"></span>
                 </li>
                 <li class="form-item">
                   <label for="password">Password</label>
@@ -399,10 +397,9 @@
                     minlength="8"
                     maxlength="18"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+                    placeholder="You need to enter an password."
                   />
-                  <span id="password-error"
-                    >You need to enter an password.</span
-                  >
+                  <span id="password-error"></span>
                 </li>
                 <li class="form-item">
                   <label for="confirm-password">Confirm Password</label>
@@ -411,10 +408,9 @@
                     id="confirm-password"
                     name="confirm-password"
                     required
+                    placeholder="Please re-enter your password to confirm accuracy."
                   />
-                  <span id="confirm-password-error"
-                    >Please re-enter your password to confirm accuracy.</span
-                  >
+                  <span id="confirm-password-error"></span>
                 </li>
                 <li class="sign-up-button-item">
                   <button type="submit" class="sign-up-button">Sign Up</button>
@@ -426,8 +422,9 @@
       </div>
     </div>
     <dialog id="dialog">
-      <h2>Your form has been submitted successfully.</h2>
-      <button id="close-dialog">Close</button>
+      <h2 class="h2">Sign Up successfull!</h2>
+      <h3 class="h3">Thank you for signing up with InfiniTech.</h3>
+      <button id="close-dialog" class="sign-up-button">Close</button>
     </dialog>
   </body>
 </html>
