@@ -33,6 +33,8 @@ const app = () => {
 
   form.addEventListener("submit", handleFormSubmit);
   closeDialogButton.addEventListener("click", handleDialogClose);
+
+  console.log("App initialized!");
 };
 
 export default app;
