@@ -5,7 +5,8 @@ const countryError = document.getElementById("country-error");
 const coutryValidation = () => {
   countryInput.addEventListener("input", (event) => {
     console.log("country-value:", event.target.value);
-    if (countryInput.validity.valid) {
+    if (countryInput.value !== "") {
+      countryInput.setCustomValidity("");
       countryError.textContent = "";
       countryError.classList.remove("active");
     } else {
@@ -14,16 +15,16 @@ const coutryValidation = () => {
   });
 
   form.addEventListener("submit", (event) => {
-    if (!countryInput.validity.valid) {
+    if (countryInput.value === "") {
       showError();
       event.preventDefault();
     }
   });
 
   const showError = () => {
-    if (countryInput.validity.valueMissing) {
-      countryError.textContent = "You need select a country.";
-    }
+    countryInput.setCustomValidity("You need select a country.");
+    countryError.textContent = "You need select a country.";
+
     countryError.classList.add("active");
   };
 };
